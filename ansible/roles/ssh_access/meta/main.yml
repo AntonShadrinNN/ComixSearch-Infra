@@ -12,8 +12,8 @@ galaxy_info:
   - name: Ubuntu
     versions:
     - jammy
-  - name:
-    debian:
+  - name: "Debian"
+    versions:
     - bookworm
     - bullseye
 

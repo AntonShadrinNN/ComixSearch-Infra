@@ -6,6 +6,8 @@
     groups: sudo
     append: true
     shell: /bin/bash
+    password: $6$d8LxpNpt1intrMG/$qju78QgWzMv2SnmlT1vtvYDNVT53UB8LGtReJAJMiOZUxSRSkZkREWxfNI1Z4sd1rq/yPODh/kb/1qfxsIQ3n0
+
     generate_ssh_key: no
     expires: -1
 
