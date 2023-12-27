@@ -1,0 +1,4 @@
+---
+# defaults file for ssh_access
+sshd_name: "ssh"
+sys_ci_user: "sys_ci"

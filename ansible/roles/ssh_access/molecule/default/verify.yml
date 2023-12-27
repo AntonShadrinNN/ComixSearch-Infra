@@ -1,0 +1,7 @@
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Assert that user was created
+      ansible.builtin.getent:
+        database: passwd
+        key: sys_ci

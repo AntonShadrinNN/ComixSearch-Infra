@@ -1,0 +1,23 @@
+galaxy_info:
+  role_name: ssh_access
+  namespace: infra
+  author: Anton Shadrin
+  description: Setup ssh access under sys_ci user to host
+
+  license: license (Apache-2.0)
+
+  min_ansible_version: "2.1"
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - jammy
+  - name:
+    debian:
+    - bookworm
+    - bullseye
+
+  galaxy_tags:
+    - ssh
+    - ubuntu
+    - debian

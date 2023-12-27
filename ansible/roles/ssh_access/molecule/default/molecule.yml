@@ -1,0 +1,25 @@
+---
+dependency:
+  name: galaxy
+  options:
+    ignore-certs: true
+    ignore-errors: true
+
+driver:
+  name: docker
+platforms:
+  - name: ubuntu
+    image: ubuntu:jammy
+    privileged: true
+
+  - name: debian
+    image: debian
+    privileged: true
+
+provisioner:
+  name: ansible
+  inventory:
+    group_vars:
+      all:
+        sshd_name: "ssh"
+        sys_ci_user: "sys_ci"
