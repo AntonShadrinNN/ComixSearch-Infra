@@ -1,1 +1,1 @@
-ansible/roles/**/*.yamllint
+**/.yamllint
