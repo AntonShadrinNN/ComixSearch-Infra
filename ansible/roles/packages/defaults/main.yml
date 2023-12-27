@@ -1,2 +1,6 @@
 ---
-# defaults file for packages
+main_packages:
+  - golang-1.21-go
+
+additional_packages:
+  - vim
