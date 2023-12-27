@@ -1,0 +1,7 @@
+---
+- name: Install jenkins
+  hosts: all
+  roles:
+    - role: jenkins_installation
+      tags: jenkins
+  become: true
