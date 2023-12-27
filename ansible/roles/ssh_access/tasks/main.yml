@@ -1,0 +1,16 @@
+---
+- name: Create sys_ci user
+  ansible.builtin.user:
+    name: "{{ sys_ci_user }}"
+    comment: "System user"
+    groups: sudo
+    append: true
+    shell: /bin/bash
+    generate_ssh_key: no
+    expires: -1
+
+- name: Copy public keys to host
+  ansible.posix.authorized_key:
+    user: "sys_ci"
+    state: "present"
+    key: "{{ id_rsa }}"

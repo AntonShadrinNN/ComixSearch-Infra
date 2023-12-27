@@ -1,0 +1,7 @@
+---
+- name: Setup sys_ci ssh-access
+  hosts: all
+  roles:
+    - role: ssh_access
+      tags: ssh
+  become: true
