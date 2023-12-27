@@ -1,6 +1,8 @@
 ---
 main_packages:
   - golang-1.21-go
+  - gpg
+  - openjdk-17-jre
 
 additional_packages:
   - vim

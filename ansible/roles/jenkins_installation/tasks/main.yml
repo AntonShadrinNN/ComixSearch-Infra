@@ -1,7 +1,11 @@
 ---
+- name: Update apt cache
+  ansible.builtin.package:
+    update_cache: true
+
 - name: Get jenkins repository key
   ansible.builtin.apt_key:
-    url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+    url: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
     state: present
 
 - name: Add jenkins repository into sources list
@@ -10,10 +14,7 @@
     state: present
     filename: jenkins
 
-- name: Try to get package cache valid time by OS
-  ansible.builtin.set_fact:
-    cache_time: 1209600
-
+# TODO: Catch exception and increase timeout https://unix.stackexchange.com/questions/227017/how-to-change-systemd-service-timeout-value
 - name: Install jenkins
   ansible.builtin.package:
     update_cache: true

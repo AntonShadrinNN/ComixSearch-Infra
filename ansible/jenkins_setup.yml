@@ -1,6 +1,6 @@
 ---
 - name: Install jenkins
-  hosts: all
+  hosts: jenkins
   roles:
     - role: jenkins_installation
       tags: jenkins
