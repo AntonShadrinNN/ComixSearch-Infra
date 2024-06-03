@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: comix-app-service
+spec:
+  selector:
+    app: comix-app
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP

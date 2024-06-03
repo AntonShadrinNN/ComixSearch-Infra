@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comix-app-bot-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: comix-app-bot
+  template:
+    metadata:
+      labels:
+        app: comix-app-bot
+    spec:
+      containers:
+      - name: comix-app-bot
+        image: ashadrinnn/tgbot:latest

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comix-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: comix-app
+  template:
+    metadata:
+      labels:
+        app: comix-app
+    spec:
+      containers:
+      - name: comix-app
+        image: ashadrinnn/comix-search-application:latest
+        ports:
+          - containerPort: 8080
